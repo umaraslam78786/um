@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responcive Personal Portfolio Website Design / Codeha1 </title>
+    <!-- box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link real="stylesheet" "href="css/style.css">
+</head>
+<body>
+    
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'poppins', sans-serif;
+    
+    }
+    :root {
+    --bg-colour: #1f242d;
+    --second-bg-colour: #323946;
+    --text-bg-colour: #fff;
+    --main-bg-colour: #0ef;
+    
+    }
+    
+    html {
+        font-size: 62.%5;
+        overflow-x: hidden;
+    
+    }
+    body {
+        background: var(--bg-colour);
+        color: var(--text-bg-colour);
+    
+    }
+    section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    }
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100;
+    padding: 2rem 9%;
+    background: var(--bg-colour);
+    display: fixed;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    }
+    .logo {
+          font-size: 2.5rem;
+          color: var(--text-bg-colour);
+          font-weight: 600;
+          cursor: default;
+    }
+    .navbar a {
+        font-size: 1.7rem;
+        color: var(--text-bg-colour);
+        margin-left: 4rem;
+        transition: 3.s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+        color: var(--main-bg-colour);
+    }
+    
+    #menu-icon {
+    font-size: 3.6rem;
+    color: var(--test-color);
+    display: none;
+     
+    
+    }
+    
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-img img {
+    width: 35vw;
+    }
+    .home-content h3 {
+        font-size: 3.2rem;
+        font-weight: 700;
+    
+    }
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 2rem;
+    
+    } 
+    span {
+        color: var(--main-bg-colour);
+    }
+    
+    .home-content h1 {
+        font-size: 5.6rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .home-content p {
+        font-size: 1.6rem;
+    }
+    .social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background: transparent;
+        border: .2rem solid var(--main-bg-colour);
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--main-bg-colour);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: .5s ease;
+    }
+    
+    .social-media a:hover {
+        background-color: var(--main-bg-colour);
+        color: var(--second-bg-colour);
+        box-shadow: 0 0 1rem var(--main-bg-colour);
+    }
+    .btn {
+        display: inline-block;
+        padding: 1rem 2,8rem;
+        background: var(--main-bg-colour);
+        border-radius: 4rem;
+        box-shadow: 0 0 1rem var(--main-bg-colour);
+        font-size: 1.7rem;
+        color: var(--second-bg-colour);
+        letter-spacing: .1rem;
+        font-weight: 600;
+        transition: .5s ease;
+    }
+    .btn:hover {
+        box-shadow: none;
+    }
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2ram;
+        background: var(--second-bg-colour);
+    }
+    .about-img img {
+        width: 35vw;
+    
+    }
+    .heading {
+        text-align: center;
+        font-size: 4.5rem;
+    
+    }
+    .about-content h2 {
+        text-align: left;
+        line-height: 1.2;
+    
+    }
+    .about-content h3 {
+        font-size: 2.6rem;
+    
+    }
+    .about-content p {
+        font-size: 1.6rem;
+        margin: 2rem 0 3rem;
+    }
+    .services h2 {
+        margin-bottom: 5rem;
+    }
+    .services-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        
+    }
+    .services-container .service-box {
+        flex: 1 1 3rem;
+        background: var(--second-bg-colour);
+        padding: 3rem 2rem 4rem;
+        border-radius: 2rem;
+        text-align: center;
+        border: 2rem solid var(--bg-colour);
+        transform: .5s ease;
+    
+    
+    }
+    .services-container .service-box:hover {
+        border-color: var(--main-bg-colour);
+        transform: scale(1.02);
+    }
+    
+    
+    .service-box i {
+        font-size: 7rem;
+        color: var(--main-bg-colour);
+    
+    }
+    .service-box h3 {
+        font-size: 2.6rem;
+         
+    }
+    .service-box p {
+        font-size: 1.6rem;
+        margin: 1rem 0 3rem;
+    }
+    .protfolio {
+        background: var(--second-bg-colour);
+    }
+    .protfolio {
+        margin: 4rem;
+    }
+    .protfolio-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
+    .protfolio-container .protfolio-box {
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem var(--bg-colour);
+        overflow: hidden;
+        display: flex;
+    
+    }
+    .protfolio-box img {
+        width: 100%;
+        transition: .5s ease;
+    }
+    .protfolio-box:hover img {
+    transform: scale(1.1);
+    
+    }
+    .protfolio-box .protfolio-layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, .1), var(--main-bg-colour));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 4rem;
+        transform: translateY(100%);
+    transition: .5s ease;
+    }
+    .protfolio-box:hover .protfolio-layer {
+        transform: translateY(0);
+    
+    }
+    .protfolio-layer h4 {
+        font-size: 3rem;
+    }
+    .protfolio-layer p {
+        font-size: 1.6rem;
+        margin: 3rem 0 1rem;
+    }
+    .protfolio-layer a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        background: var(--text-bg-colour);
+        border-radius: 50%;
+    
+    }
+    .protfolio-layer a i {
+        font-size: 2rem;
+        color: var(--second-bg-colour);
+    }
+    .contact h2 {
+        margin-bottom: 3rem;
+    }
+    .contact form {
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .contact form .input-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    
+    }
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        border-radius: 8rem;
+        margin: .7rem 0;
+    }
+    .contact form .input-box input {
+        width: 49%;
+    }
+    .contact form textarea {
+        resize: none;
+    
+    }
+    .contact form .btn {
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem 9%;
+        background: var(--second-bg-colour);
+    
+    }
+    .footer-text p {
+        font-size: 1.6rem;
+    
+    }
+    .footer-iconTop a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem;
+        background: var(--main-bg-colour);
+        border-radius: .8rem;
+        transition: .5s ease;
+    }
+    .footer-iconTop a:hover {
+        box-shadow: 0 0 1rem var(--main-bg-colour);
+    
+    
+    }
+    .footer-iconTop a i {
+        font-size: 2.4rem;
+        color: var(--second-bg-colour);
+    
+    }
+    
+    </style>
+    <!-- header Design -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <box-icon name='menu'id="menu=icon" ></box-icon>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#content">Content</a>
+        </nav>
+    </header>
+    <!--home section design-->
+    <section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>UMAR ASLAM</h1>
+        <h3>And I'm a <span>Fronted Developer</span></h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi praesentium sapiente libero rerum! Dolores omnis culpa fugit?</p>
+        <div class="social-media">
+            <a href="#"><box-icon type='logo' name='facebook'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='whatsapp'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='youtube'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='instagram'></box-icon></a>
+            <a href="#"><box-icon type='logo' name='linkedin'></box-icon></a>
+        </div>
+    <a href="#" class="btn">Downlod CV</a>
+    <div class="home-img">
+        <img src="https://scontent.fkhi22-1.fna.fbcdn.net/v/t39.30808-6/330978409_918818755922313_8540761546406796176_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeH197aVRetAfxaScpdQkKG6TUkWFszs2cRNSRYWzOzZxES4jxycqgftJ5uqFd9hokyGiTn1oAGpw36owrsBwSFQ&_nc_ohc=BbmQE_vBeFwAX9WdM4m&_nc_ht=scontent.fkhi22-1.fna&oh=00_AfBe7kPgjR8eDV_1xqxysnszPiPV2lrLYRmhqvjaWpq2Hg&oe=6444F065" alt="">
+    </div>
+    
+    
+    </div>
+    </section>
+     <!-- about section design -->
+     <section class="about" id="about">
+        <div class="about-imga">
+            <img src="https://scontent.fkhi22-1.fna.fbcdn.net/v/t39.30808-6/329360602_5658487654249534_3279346448767797107_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHnG7LyixvSdAK0qHWEfme5qNzNwHr1Xseo3M3AevVex4djbzhYaC-w1vxwcJ-6xphAjNZnBx2RQ8RrmTwQgC_T&_nc_ohc=n6Kp32auiNsAX8ak1Te&_nc_ht=scontent.fkhi22-1.fna&oh=00_AfBGxdjCQ7kdo4KtVdRn_iyVQyd8onAtl0QNN3ToITs-gg&oe=64443069" alt="">        </div>
+<div class="about-content">
+    <h2 class="heading">About <span>Me</span></h2>
+    <h3>Fronted Developer!</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio error repellendus consequatur illo, labore ea omnis quasi saepe et tempora fugiat, cumque,
+         est perspiciatis ab odit. Explicabo officiis nam natus laborum tempore ut earum error voluptate deleniti? Itaque ut labore amet optio dolor nihil assumenda
+          dolore!</p>
+          <a href="#" class="btn">Read More</a>
+</div>
+     </section>
+
+<!--Services section design -->
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+        <div class="service-box">
+            <box-icon name='code-alt'></box-icon>
+            <h3>Web Developer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab reiciendis voluptatum iure, voluptate quod rerum est vel minus excepturi.</p>
+<a href="#" class="herf">Read More</a>
+
+            </div>
+
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+        <div class="service-box">
+            <box-icon type='solid' name='paint'></box-icon>
+            <h3>Graphic Design</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab reiciendis voluptatum iure, voluptate quod rerum est vel minus excepturi.</p>
+<a href="#" class="herf">Read More</a>
+
+            </div>
+
+            <section class="services" id="services">
+                <h2 class="heading">Our <span>Services</span></h2>
+                <div class="services-container">
+                    <div class="service-box">
+                        <box-icon name='bar-chart-alt'></box-icon>
+                        <h3>Digital Markiting</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab reiciendis voluptatum iure, voluptate quod rerum est vel minus excepturi.</p>
+            <a href="#" class="herf">Read More</a>
+            
+                        </div>
+    </div>
+</section>
+<!--Portfolio section design-->
+<section class="protfolio" id="portfolio">
+<h2 class="heading">Latest <span>Project</span></h2>
+<div class="protfolio-container">
+    <div class="protfolio-box">
+        <img src="https://www.lateet.com/wp-content/uploads/2018/09/clean-website-design.jpeg" alt="">
+        <div class="protfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores.
+            </p>
+            <a href="#<box-icon name='link-external'></box-icon>"></a>
+
+        </div>
+    </div>
+    <div class="protfolio-box">
+        <img src="http://infinitumdigital.com/wp-content/uploads/2015/07/shutterstock_122664079.jpg" alt="">
+        <div class="protfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores.
+            </p>
+            <a href="#<box-icon name='link-external'></box-icon>"></a>
+
+        </div>
+    </div>
+    <div class="protfolio-box">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/457/141/original/landing-page-template-of-website-design-illustration-concept-isometric-flat-design-concept-of-web-page-design-for-website-and-mobile-website-vector-illustration.jpg" alt="">
+        <div class="protfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores.
+            </p>
+            <a href="#<box-icon name='link-external'></box-icon>"></a>
+
+        </div>
+    </div>
+    <div class="protfolio-box">
+        <div class="protfolio-layer">
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, maiores.
+            </p>
+            <a href="#<box-icon name='link-external'></box-icon>"></a>
+
+        </div>
+    </div>
+</div>
+</section>
+<!-- contact section design -->
+<section class="contact" id="contact">
+<h2 class="heading">contact <span>M!</span></h2>
+<form action="#">
+<div class="input-box">
+    <input type="text" placeholder="Full name">
+    <input type="email" placeholder="Email Address">
+
+</div>
+<div class="input-box">
+    <input type="number" placeholder="Mobile Number">
+    <input type="text" placeholder="Email Subject">
+
+</div>
+<textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+<input type="submit" value="Send Message" class="btn">
+</form>
+
+</section>
+<!-- footer design-->
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2023 by Codeha1 | All Right Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#Home"><box-icon name='up-arrow-alt'></box-icon></a>
+    </div>
+</footer>
+<!--custom js-->
+<script>scr="js/script.js"></script>
+<style>import java.io.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+    
+    public class MyServlet extends HttpServlet {
+        public void doPost(HttpServletRequest request, HttpServletResponse response)
+                throws ServletException, IOException {
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+    
+            String name = request.getParameter("name");
+            String email = request.getParameter("email");
+    
+            out.println("<html><head><title>Form Submission Results</title></head><body>");
+            out.println("<h1>Form Submission Results</h1>");
+            out.println("<p>Name: " + name + "</p>");
+            out.println("<p>Email: " + email + "</p>");
+            out.println("</body></html>");
+        }
+    }
+    </style>
+</body>
+</html>
